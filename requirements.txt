@@ -1,0 +1,8 @@
+Flask>=1.1.2
+gunicorn>=20.0.4
+google-cloud-bigquery>=2.6.1
+google-cloud-storage >=1.39.0
+google-cloud
+pandas
+fsspec
+gcsfs
