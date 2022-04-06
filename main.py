@@ -22,7 +22,6 @@ def entry():
     #bucket = "gs://cloud-run-bq-celine"
     #folder = "covid_folder"
     #pattern="example_data_covid"
-    #delimter=","
     #dataset="cloud_run_bq"
     #table_name = "cloud_run_bq_init"
     #archive_folder="covid_folder_archive"
@@ -43,12 +42,9 @@ def entry():
     except:
         print("Error Verify the Name of bucket please ")
         return ("Error Verify the Name of bucket please. \n", 500)
-    if table_name is None or folder is None or pattern is None or delimiter is None or dataset is None or archive_folder is None:
+    if table_name is None or folder is None or pattern is None or dataset is None or archive_folder is None:
         print("Error:  environments variables are not defined correctly")
         return ("Error  environments variables are not defined correctly.  \n", 500)
-    if (len(delimiter)!=1):
-        print("Error: Delimiter environment variable is not defined correctly")
-        return ("Error: Delimiter environment variable is not defined correctly. \n", 500)
 
     #set destination file + uri of csv files
     table=dataset+"."+table_name
